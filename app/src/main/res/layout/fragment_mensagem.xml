@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MensagemActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/image_message_profile"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+         />
+    //android:background="@drawable/circle"
+    <TextView
+        android:id="@+id/text_message_name"
+        android:text="John Doe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/text_message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/retangulo_chat"
+        android:maxWidth="240dp"
+        android:padding="8dp"
+        android:text="hi man, how are you?"
+
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/text_message_time"
+        android:text="11:40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+
+        android:layout_marginLeft="4dp"
+         />
+
+
+
+</FrameLayout>

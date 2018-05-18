@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChatOff</string>
+    <string name="numeroHint">Telefone</string>
+    <string name="btnNumero">Entrar</string>
+    <string name="textoHint">Para utilizar o ChatOff, precisamos que você forneça o seu
+    número de telefone!</string>
+    <string name="usuarioIconePerfil">Imagem de usuário</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iconecontato">iconeContato</string>
+    <string name="title_activity_conversa">ConversaActivity</string>
+</resources>
