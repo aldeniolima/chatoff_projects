@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int x = 2;
-       if(x == 3){
-
+       if(x == 2){
+           Intent intent = new Intent(this, CadastroActivity.class);
+           intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+           intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+           startActivity(intent);
+           finish();
+       }else{
            setContentView(R.layout.activity_main);
            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
            setSupportActionBar(toolbar);
@@ -50,9 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                }
            });
-       }else{
-           Intent intent = new Intent(this, CadastroActivity.class);
-           startActivity(intent);
        }
     }
 
