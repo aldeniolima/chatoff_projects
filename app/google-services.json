@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "816258949623",
+    "firebase_url": "https://talkoff-46d16.firebaseio.com",
+    "project_id": "talkoff-46d16",
+    "storage_bucket": "talkoff-46d16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816258949623:android:d11e948f5910f7e1",
+        "android_client_info": {
+          "package_name": "br.edu.ifpe.tads.pdm.chatoff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816258949623-6n19nbmditejt918qbj4fastnosme1a2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.ifpe.tads.pdm.chatoff",
+            "certificate_hash": "8ed5980c3c0e71631591eb6995efdcf12fc19d94"
+          }
+        },
+        {
+          "client_id": "816258949623-tc10em0idiqio4j5f39v339o1je2dabj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjbcqO8WZtW0B3yy6Rl2LwBsSg_7nUmEo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816258949623-tc10em0idiqio4j5f39v339o1je2dabj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

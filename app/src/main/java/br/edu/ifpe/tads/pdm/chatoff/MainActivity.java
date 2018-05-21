@@ -16,37 +16,44 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        int x = 2;
+       if(x == 3){
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Mensagens"));
-        tabLayout.addTab(tabLayout.newTab().setText("Contatos"));
-        tabLayout.addTab(tabLayout.newTab().setText("Perfil"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+           setContentView(R.layout.activity_main);
+           Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+           setSupportActionBar(toolbar);
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        final AdaptadorPagina adapter = new AdaptadorPagina
-                (getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
+           TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+           tabLayout.addTab(tabLayout.newTab().setText("Mensagens"));
+           tabLayout.addTab(tabLayout.newTab().setText("Contatos"));
+           tabLayout.addTab(tabLayout.newTab().setText("Perfil"));
+           tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+           final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+           final AdaptadorPagina adapter = new AdaptadorPagina
+                   (getSupportFragmentManager(), tabLayout.getTabCount());
+           viewPager.setAdapter(adapter);
+           viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+           tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+               @Override
+               public void onTabSelected(TabLayout.Tab tab) {
+                   viewPager.setCurrentItem(tab.getPosition());
+               }
 
-            }
+               @Override
+               public void onTabUnselected(TabLayout.Tab tab) {
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+               }
 
-            }
-        });
+               @Override
+               public void onTabReselected(TabLayout.Tab tab) {
+
+               }
+           });
+       }else{
+           Intent intent = new Intent(this, CadastroActivity.class);
+           startActivity(intent);
+       }
     }
 
     @Override
