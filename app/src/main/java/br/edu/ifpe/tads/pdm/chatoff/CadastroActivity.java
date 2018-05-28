@@ -1,26 +1,41 @@
 package br.edu.ifpe.tads.pdm.chatoff;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.EditText;
+
+
+import com.firebase.ui.auth.AuthUI;
+
+import java.util.Arrays;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    public final static String EXTRA_MESSAGE =
-            "chatoff.pdm.tads.ifpe.edu.br.chatoff.MESSAGE";
+    public static final int RC_SIGN_IN = 1234;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+
+        logarAplicacao();
     }
-    public void sendCadastro(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        EditText editText = (EditText) findViewById(R.id.numero);
-        String numero = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, numero);
-        startActivity(intent);
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        logarAplicacao();
     }
+
+    public void logarAplicacao(){
+        startActivityForResult(
+                AuthUI.getInstance()
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(Arrays.asList(
+                                new AuthUI.IdpConfig.PhoneBuilder().build()
+                               ))
+                        .build(),
+                RC_SIGN_IN);
+    }
+
 }
