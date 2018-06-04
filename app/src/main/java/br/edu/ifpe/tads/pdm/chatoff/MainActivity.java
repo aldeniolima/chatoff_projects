@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
             });
         } else {
             Intent intent = new Intent(this, CadastroActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
         }
